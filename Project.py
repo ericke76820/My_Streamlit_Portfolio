@@ -106,9 +106,9 @@ projects = [
         "desc": "展示如何將 LM Studio 串連至 Discord...",
     },
     {
-        "title": "Discord AI 助手 (LM Studio)",
+        "title": "Discord AI 助手 (LM Studio)圖示",
         "file": ASSETS_DIR / "project_discord.png",
-        "desc": "展示如何將 LM Studio 串連至 Discord...",
+        "desc": "部分python code",
     },
     {
         "title": "Openclaw 整合應用",
@@ -116,9 +116,9 @@ projects = [
         "desc": "展示如何將 Ollama 模型串連至 Openclaw...",
     },
     {
-        "title": "Openclaw 整合應用",
+        "title": "Openclaw 整合圖示",
         "file": ASSETS_DIR / "project_openclaw.png",
-        "desc": "展示如何將 Ollama 模型串連至 Openclaw...",
+        "desc": "Openclaw dermon terminal running & setting",
     }
 ]
 
