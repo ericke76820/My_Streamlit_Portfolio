@@ -146,7 +146,7 @@ for p in projects:
             st.error(f"找不到檔案：{p['file'].name}，請確認檔案已放入 assets 資料夾。")
 
     with col_txt:
-        st.subheader("📝 作品摘要")
+        st.subheader(f"📝 {p['title']}")
         st.write(p["desc"])
     
     st.markdown("---")
