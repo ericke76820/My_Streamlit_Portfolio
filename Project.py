@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 # --- 網頁設定 ---
-st.set_page_config(page_title="我的轉職作品集", page_icon="🚀", layout="wide")
+st.set_page_config(page_title="我的作品集", page_icon="🚀", layout="wide")
 
 # --- 路徑設定 ---
 # 取得目前這份 app.py 所在的資料夾路徑
