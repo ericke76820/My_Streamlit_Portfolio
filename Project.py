@@ -90,6 +90,7 @@ with col_info:
         
         # 使用 st.markdown 顯示 HTML
         st.markdown(pdf_display, unsafe_allow_html=True)
+        st.caption("若無法顯示專題更詳細的資訊，請直接下載出來!")
 
     else:
         st.error(f"找不到 PDF 檔案：{PDF_FILE}，請確認檔案已放入 assets 資料夾。")
@@ -108,7 +109,7 @@ projects = [
     {
         "title": "Discord AI 助手 (LM Studio)圖示",
         "file": ASSETS_DIR / "project_discord.png",
-        "desc": "部分python code",
+        "desc": "讓LM運行的部分python code",
     },
     {
         "title": "Openclaw 整合應用",
@@ -118,7 +119,7 @@ projects = [
     {
         "title": "Openclaw 整合圖示",
         "file": ASSETS_DIR / "project_openclaw.png",
-        "desc": "Openclaw dermon terminal running & setting",
+        "desc": "Openclaw daemon terminal running & setting",
     }
 ]
 
@@ -144,9 +145,10 @@ for p in projects:
                 st.warning(f"不支援的檔案格式：{file_extension}")
         else:
             st.error(f"找不到檔案：{p['file'].name}，請確認檔案已放入 assets 資料夾。")
+    st.caption("這是實際運行演示。")
 
     with col_txt:
-        st.subheader(f"📝 {p['title']}")
+        st.subheader(f"🖼️ {p['title']}")
         st.write(p["desc"])
     
     st.markdown("---")
