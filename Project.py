@@ -109,7 +109,7 @@ projects = [
     {
         "title": "Discord AI 助手 (LM Studio)圖示",
         "file": ASSETS_DIR / "project_discord.png",
-        "desc": "讓LM運行的部分python code",
+        "desc": "讓LM運行的部分python code，主要利用discord與openai套件來將LM Studio載好且運行中的語言模型串接到discord，且利用discord介面來聊天，其他運用到的套件大部分為個人寫的簡易判別式，用不同字元來做不同功能",
     },
     {
         "title": "Openclaw 整合應用",
@@ -119,7 +119,7 @@ projects = [
     {
         "title": "Openclaw 整合圖示",
         "file": ASSETS_DIR / "project_openclaw.png",
-        "desc": "Openclaw daemon terminal running & setting",
+        "desc": "Accroding to the picture is my computer openclaw background terminal running & setting, 利用Ollama來將載好且運行的語言模型串接至dashboard(網頁介面)來對語言模型下指令",
     }
 ]
 
