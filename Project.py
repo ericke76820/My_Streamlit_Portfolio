@@ -119,7 +119,7 @@ projects = [
     {
         "title": "Openclaw 整合圖示",
         "file": ASSETS_DIR / "project_openclaw.png",
-        "desc": "Accroding to the picture is my computer openclaw background terminal running & setting, 利用Ollama來將載好且運行的語言模型串接至dashboard(網頁介面)來對語言模型下指令",
+        "desc": "The picture is showing my computer openclaw background terminal working status & setting, 利用Ollama來將載好且運行的語言模型串接至dashboard(網頁介面)來對語言模型下指令",
     }
 ]
 
