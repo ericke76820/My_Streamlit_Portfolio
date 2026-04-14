@@ -148,7 +148,7 @@ for p in projects:
     st.caption("這是實際運行演示。")
 
     with col_txt:
-        st.subheader(f"🖼️ {p['title']}")
+        st.subheader(f"🖼️ 作品說明")
         st.write(p["desc"])
     
     st.markdown("---")
