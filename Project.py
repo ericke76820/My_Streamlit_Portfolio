@@ -114,7 +114,7 @@ projects = [
     {
         "title": "Openclaw 整合應用",
         "file": ASSETS_DIR / "project_openclaw.mp4",
-        "desc": "展示如何將 Ollama 模型串連至 Openclaw...",
+        "desc": "展示如何將 Ollama 載好的語言模型串連至 Openclaw...",
     },
     {
         "title": "Openclaw 整合圖示",
