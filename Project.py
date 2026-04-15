@@ -139,13 +139,15 @@ for p in projects:
             # 判斷檔案類型
             if file_extension in [".mp4", ".mov", ".avi"]:
                 st.video(str(p["file"]))
+                st.caption("這是實際運行演示。")
             elif file_extension in [".png", ".jpg", ".jpeg", ".gif"]:
                 st.image(str(p["file"]), width="stretch")
+                st.caption("這是實際運行演示。")
             else:
                 st.warning(f"不支援的檔案格式：{file_extension}")
         else:
             st.error(f"找不到檔案：{p['file'].name}，請確認檔案已放入 assets 資料夾。")
-    st.caption("這是實際運行演示。")
+    
 
     with col_txt:
         st.subheader(f"🖼️ 作品說明")
