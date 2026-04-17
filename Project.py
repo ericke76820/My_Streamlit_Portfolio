@@ -105,21 +105,25 @@ projects = [
         "title": "Discord AI 助手 (LM Studio)",
         "file": ASSETS_DIR / "project_discord.mp4",
         "desc": "展示如何將 LM Studio 串連至 Discord...",
+        "detail": "這是實際運行演示。",
     },
     {
         "title": "Discord AI 助手 (LM Studio)圖示",
         "file": ASSETS_DIR / "project_discord.png",
         "desc": "讓LM運行的部分python code，主要利用discord與openai套件來將LM Studio載好且運行中的語言模型串接到discord，且利用discord介面來聊天，其他運用到的套件大部分為個人寫的簡易判別式，用不同字元來做不同功能",
+        "detail": "這是實際運行展示。",
     },
     {
         "title": "Openclaw 整合應用",
         "file": ASSETS_DIR / "project_openclaw.mp4",
         "desc": "展示如何將 Ollama 載好的語言模型串連至 Openclaw...",
+        "detail": "這是實際運行演示。",
     },
     {
         "title": "Openclaw 整合圖示",
         "file": ASSETS_DIR / "project_openclaw.png",
         "desc": "The picture is showing my computer openclaw background terminal working status & setting, 利用Ollama來將載好且運行的語言模型串接至dashboard(網頁介面)來對語言模型下指令",
+        "detail": "這是實際運行展示。",
     }
 ]
 
@@ -139,10 +143,10 @@ for p in projects:
             # 判斷檔案類型
             if file_extension in [".mp4", ".mov", ".avi"]:
                 st.video(str(p["file"]))
-                st.caption("這是實際運行演示/展示。")
+                st.caption(f"{p['detail']}")
             elif file_extension in [".png", ".jpg", ".jpeg", ".gif"]:
                 st.image(str(p["file"]), width="stretch")
-                st.caption("這是實際運行演示/展示。")
+                st.caption(f"{p['detail']}")
             else:
                 st.warning(f"不支援的檔案格式：{file_extension}")
         else:
