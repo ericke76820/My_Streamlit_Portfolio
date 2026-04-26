@@ -27,7 +27,16 @@ with st.sidebar:
 # --- 主頁面：個人簡介 ---
 st.title("👨‍💻 你好，我是 柯柏維", anchor="about")
 st.subheader("目標職業：硬體維修或軟體工程師")
-st.write("  我是一名具備軟硬體整合能力的資訊工程背景開發者，畢業於國立屏東大學電腦與通訊學系。擅長 Python、C 與 Java，並對人工智慧、系統開發與實務應用充滿熱情。在學期間，我除了扎實學習資料結構、程式設計與計算機組織等核心課程外，也深入接觸圖像處理與機器學習相關技術，並取得多項程式語言證照，建立完整的資訊基礎。我熱衷於實作與自主學習，曾在個人電腦上建置大型語言模型環境，透過 LM Studio 與 Ollama 整合 LLaMA 與 Qwen 模型，並結合 Discord 與相關工具進行應用開發。同時，我也基於興趣開發遊戲模組，累積跨語言與實務開發經驗。我擅長從問題出發，透過技術實作將想法落地，並持續探索人工智慧與軟體工程的更多可能性。")
+st.write("""
+我是一名具備軟硬體整合能力的開發者，畢業於國立屏東大學電腦與通訊學系。擅長 Python、C 與 Java，並對人工智慧的落地應用與系統開發充滿熱情。
+
+在學期間除了扎實的資訊科學基礎（如資料結構、計算機組織），我更熱衷於動手實作：
+* **AI 模型本地端部署：** 熟悉利用 LM Studio 與 Ollama 部署 LLaMA、Qwen 等大型語言模型。
+* **API 與系統串接：** 具備將本地 AI 模型整合至 Discord Bot 與 OpenClaw 系統的實務經驗。
+* **軟硬體系統整合：** 曾參與開發智慧電控水果分級機，解決嵌入式系統與影像辨識模型的兼容性問題。
+
+我擅長從問題出發，透過程式將想法具現化，並期待未來能在軟體工程領域持續探索與成長。
+""")
 
 st.markdown("---")
 
@@ -102,28 +111,28 @@ st.markdown("---")
 # 定義作品資料
 projects = [
     {
-        "title": "Discord AI 助手 (LM Studio)",
+        "title": "Discord AI 助手 (串接 LM Studio)",
         "file": ASSETS_DIR / "project_discord.mp4",
-        "desc": "展示如何將 LM Studio 串連至 Discord...",
-        "detail": "這是實際運行演示。",
+        "desc": "展示 Discord AI 助手的實際互動過程，包含自然語言對話與特定指令的執行回饋。",
+        "detail": "系統運行演示",
     },
     {
-        "title": "Discord AI 助手 (LM Studio)圖示",
+        "title": "Discord AI 助手 - 核心架構",
         "file": ASSETS_DIR / "project_discord.png",
-        "desc": "讓LM運行的部分python code，主要利用discord與openai套件來將LM Studio載好且運行中的語言模型串接到discord，且利用discord介面來聊天，其他運用到的套件大部分為個人寫的簡易判別式，用不同字元來做不同功能",
-        "detail": "這是實際運行展示。",
+        "desc": "**技術堆疊：Python, discord.py, openai API, asyncio**\n\n負責處理大型語言模型與 Discord 伺服器之間的中介程式。利用 OpenAI 套件格式完美橋接 LM Studio 的本地端模型，並透過 `asyncio` 處理非同步訊息，確保多使用者對話時的順暢度。同時自行開發指令解析邏輯，實現不同觸發字元的對應功能。",
+        "detail": "核心程式碼展示",
     },
     {
-        "title": "Openclaw 整合應用",
+        "title": "OpenClaw Web GUI 整合應用",
         "file": ASSETS_DIR / "project_openclaw.mp4",
-        "desc": "展示如何將 Ollama 載好的語言模型串連至 Openclaw...",
-        "detail": "這是實際運行演示。",
+        "desc": "展示透過 OpenClaw Dashboard 直接與後端 Ollama 模型進行互動與指令下達的流暢體驗。",
+        "detail": "系統運行演示",
     },
     {
-        "title": "Openclaw 整合圖示",
+        "title": "OpenClaw 終端機與背景服務部署",
         "file": ASSETS_DIR / "project_openclaw.png",
-        "desc": "The picture is showing my computer openclaw background terminal working status & setting, 利用Ollama來將載好且運行的語言模型串接至dashboard(網頁介面)來對語言模型下指令",
-        "detail": "這是實際運行展示。",
+        "desc": "**技術堆疊：Ollama, OpenClaw, PowerShell**\n\n展示 OpenClaw Gateway 與背景服務的運行狀態。透過 Ollama 將大型語言模型（如 Qwen）部署於本地端，並將節點成功註冊至 OpenClaw Dashboard，實現無需依賴雲端資源的純本地端 AI 網頁控制中心。",
+        "detail": "伺服器運行狀態展示",
     }
 ]
 
@@ -145,7 +154,7 @@ for p in projects:
                 st.video(str(p["file"]))
                 st.caption(f"{p['detail']}")
             elif file_extension in [".png", ".jpg", ".jpeg", ".gif"]:
-                st.image(str(p["file"]), width="stretch")
+                st.image(str(p["file"]), use_container_width=True)
                 st.caption(f"{p['detail']}")
             else:
                 st.warning(f"不支援的檔案格式：{file_extension}")
