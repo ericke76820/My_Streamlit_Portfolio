@@ -80,25 +80,6 @@ with col_info:
         )
         
         st.write("或是直接在下方預覽：")
-        
-        # 讀取 PDF 並轉換為 base64 字符串
-        # 2. 嵌入 PDF 預覽 (優化版)
-        '''with open(PDF_FILE, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        
-        # 改用 iframe 標籤，並設定寬度為 100%
-        pdf_display = f"""
-            <iframe 
-                src="data:application/pdf;base64,{base64_pdf}" 
-                width="100%" 
-                height="600" 
-                type="application/pdf"
-                style="border:none;">
-            </iframe>
-        """ '''
-        
-        # 使用 st.markdown 顯示 HTML
-        #st.markdown(pdf_display, unsafe_allow_html=True)
         st.pdf(PDFbyte, height=600)
         st.caption("若無法顯示專題更詳細的資訊，請直接下載出來!")
 
